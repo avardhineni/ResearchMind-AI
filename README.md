@@ -28,23 +28,29 @@ ResearchMind AI is a Streamlit-based research assistant that uses **agentic retr
 
 ```mermaid
 flowchart TD
-    U[Researcher] --> UI[Streamlit UI - app.py]
-    UI --> ING[Document and paper ingestion]
-    ING --> SRC[PDF / TXT / Markdown / URL / arXiv / Semantic Scholar]
-    SRC --> CH[Parsing and chunking]
-    CH --> EMB[OpenAI embeddings with local cache]
-    EMB --> Q[Qdrant - session-specific collections]
-    UI --> LG[LangGraph research workflow]
-    LG --> ROUTE{Query routing}
-    ROUTE --> RAG[Retrieve and answer]
-    ROUTE --> VERIFY[Claim verification]
-    ROUTE --> DIRECT[Direct response]
+    U["Researcher"] --> UI["Streamlit UI - app.py"]
+
+    UI --> ING["Document and Paper Ingestion"]
+    ING --> SRC["PDF / TXT / Markdown / URL / arXiv / Semantic Scholar"]
+    SRC --> CH["Parsing and Chunking"]
+    CH --> EMB["OpenAI Embeddings with Local Cache"]
+    EMB --> Q["Qdrant - Session-Specific Collections"]
+
+    UI --> LG["LangGraph Research Workflow"]
+    LG --> ROUTE{"Query Routing"}
+
+    ROUTE --> RAG["Retrieve and Answer"]
+    ROUTE --> VERIFY["Claim Verification"]
+    ROUTE --> DIRECT["Direct Response"]
+
     RAG --> Q
-    RAG --> WEB[Tavily / Semantic Scholar search]
+    RAG --> WEB["Tavily / Semantic Scholar Search"]
     VERIFY --> WEB
-    LG --> LLM[OpenAI chat model]
-    LG --> CP[SQLite checkpoints]
-    UI --> BTW[/btw side-question handler]
+
+    LG --> LLM["OpenAI Chat Model"]
+    LG --> CP["SQLite Checkpoints"]
+
+    UI --> BTW["/btw Side-Question Handler"]
 ```
 
 ### Technology stack
