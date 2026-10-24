@@ -8,7 +8,6 @@
 
 ![ResearchMind AI dashboard concept showing research sessions, knowledge base, paper discovery, and chat](assets/researchmind-dashboard.png)
 
-*ResearchMind AI interface concept — illustrative design mockup, not a screenshot of the running application.*
 
 ResearchMind AI is a Streamlit-based research assistant that uses **agentic retrieval-augmented generation (Agentic RAG)** to analyze research documents, answer contextual questions, discover academic papers, and investigate research claims using external sources. Research conversations and their indexed documents are organized by session.
 
