@@ -1,0 +1,28 @@
+
+# Secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# ResearchMind AI runtime data
+embedding_cache/
+checkpoints.db*
+eval_checkpoints.db*
+sessions.json
+eval_results.json
+goldens.json
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
